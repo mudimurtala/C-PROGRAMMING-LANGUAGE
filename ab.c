@@ -1,7 +1,5 @@
 #include <stdio.h>
-
-int main( )
-{
+int main ()  {
     // Displaying a message
     printf("Hello, World!\n");
 
