@@ -127,14 +127,16 @@ void sum(float, float);
 void main()
 {
     float x, y;
-    printf("Enter x and y :");
-    scanf("%f%f", &x, &y);
+    printf("Enter x :");
+    scanf("%f", &x);
+    printf("Enter y :");
+    scanf("%f", &y);
     sum(x, y);
 }
 
 void sum(float a, float b)
 {
-    //float s = 0;
-    //s = a + b;
-    printf("Sum = %f", a = b);
+    float s = 0;
+    s = a + b;
+    printf("Sum = %f\n", s);
 }
