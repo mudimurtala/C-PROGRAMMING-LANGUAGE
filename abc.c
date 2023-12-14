@@ -120,23 +120,25 @@
 //     return sum, b, a, sum;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void sum(float, float);
+// void sum(float, float);
 
-void main()
-{
-    float x, y;
-    printf("Enter x :");
-    scanf("%f", &x);
-    printf("Enter y :");
-    scanf("%f", &y);
-    sum(x, y);
-}
+// void main()
+// {
+//     float x, y;
+//     printf("Enter x :");
+//     scanf("%f", &x);
+//     printf("Enter y :");
+//     scanf("%f", &y);
+//     sum(x, y);
+// }
 
-void sum(float a, float b)
-{
-    float s = 0;
-    s = a + b;
-    printf("Sum = %f\n", s);
-}
+// void sum(float a, float b)
+// {
+//     float s = 0;
+//     s = a + b;
+//     printf("Sum = %f\n", s);
+// }
+
+
