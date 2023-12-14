@@ -18,15 +18,15 @@
 
 #include <stdio.h>
 
-int main()
-{
-    int a = 1025;
-    int *p;
-    p = &a;
-    printf("Size of integer is %ld\n",sizeof(int));
-    printf("%p, %d\n", p, *p);
+// int main()
+// {
+//     int a = 1025;
+//     int *p;
+//     p = &a;
+//     printf("Size of integer is %ld\n",sizeof(int));
+//     printf("%p, %d\n", p, *p);
 
 
-    return 0;
-}
+//     return 0;
+// }
 
