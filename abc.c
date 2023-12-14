@@ -190,24 +190,26 @@
 //     printf("%d\n", i + j);
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int arg(int[], int);
+// int arg(int[], float);
 
-void main()
-{
-    int average;
-    int marks[5] = {10, 15, 20, 30, 45};
-    average = arg(marks, 5);
-    printf("arg is %d", average);
-}
+// void main()
+// {
+//     float average;
+//     int marks[5] = {10, 15, 20, 30, 45};
+//     average = arg(marks, 5);
+//     printf("arg is %f\n", average);
+// }
 
-int arg(int marks[], int a)
-{
-    int i, sum = 0, average = 0;
-    for(i = 0;i < a; i++)
-    {
-        sum = sum + marks[i];
-        average = sum/a;
-    }
-}
+// int arg(int marks[], float a)
+// {
+//     int i, sum = 0;
+//     float average = 0;
+//     for(i = 0;i < a; i++)
+//     {
+//         sum = sum + marks[i];
+//         average = sum/a;
+//     }
+// }
+
