@@ -49,20 +49,21 @@
 //     sum();
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void sum(); // function declaration
-void main()
-{
-    sum(); // function calling
-}
+// void sum(); // function declaration
+// void main()
+// {
+//     sum(); // function calling
+// }
 
-void sum()
-{
-    int a, b, sum = 0;
-    printf("Enter two numbers: ");
-    scanf("%d%d", &a, &b);
-    sum = a + b;
-    printf("Sum = %d\n", sum);
-}
+// void sum()
+// {
+//     int a, b, sum = 0;
+//     printf("Enter two numbers: ");
+//     scanf("%d%d", &a, &b);
+//     sum = a + b;
+//     printf("Sum = %d\n", sum);
+// }
+
 
