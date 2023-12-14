@@ -179,7 +179,7 @@
 void f(int *p, int m)
 {
     m = m + 5;
-    *p = m - *p;
+    *p = *p + m;
     return;
 }
 
