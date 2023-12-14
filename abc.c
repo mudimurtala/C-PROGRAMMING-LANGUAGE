@@ -54,7 +54,7 @@
 void sum(); // function declaration
 void main()
 {
-    sum(37, 78); // function calling
+    sum(); // function calling
 }
 
 void sum()
