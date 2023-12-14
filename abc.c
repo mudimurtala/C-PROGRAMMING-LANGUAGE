@@ -213,3 +213,13 @@
 //     }
 // }
 
+#include <stdio.h>
+
+int avg(int[]);
+
+void main()
+{
+    int marks[5] = {10, 20, 30, 40, 50}, size;
+    size = sizeof(marks)/sizeof(marks[0]);
+    printf("%d\n", size);
+}
