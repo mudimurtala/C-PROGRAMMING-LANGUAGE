@@ -117,5 +117,5 @@ int sum()
 {
     int a = 5, b = 7, sum = 0;
     sum = a + b;
-    return sum, b, a;
+    return sum, b, a, sum;
 }
