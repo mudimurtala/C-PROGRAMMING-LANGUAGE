@@ -103,3 +103,18 @@
 
 #include <stdio.h>
 
+int sum(void);
+
+void main()
+{
+    int s;
+    s = sum();
+    printf("sum = %d\n", s);
+
+}
+
+int sum()
+{
+    int a = 5, b = 7;
+    return a + b;
+}
