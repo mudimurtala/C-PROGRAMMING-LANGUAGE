@@ -230,7 +230,7 @@ int avg(int marks1[], int size)
     int i, sum, average;
     for(i = 0; i < size; i++)
     {
-        sum = sum + marks1[1];
+        sum = sum + marks1[i];
     }
     average = sum/size;
     return average;
