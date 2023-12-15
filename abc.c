@@ -301,6 +301,6 @@ void main()
 
 char* display()
 {
-    char str[] = "jenny";
+    static char str[] = "jenny";
     return str;
 }
