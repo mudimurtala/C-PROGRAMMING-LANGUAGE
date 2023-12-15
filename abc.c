@@ -401,7 +401,7 @@ int main()
 {
     //size --> what do we put?
     //void* --> how can we get a stronger type?
-    //printf("%lu\n", sizeof(int) * 10);
+    printf("%lu\n", sizeof(int) * 10);
     int count = 20;
     int* array = malloc(sizeof(int) * count);
 
