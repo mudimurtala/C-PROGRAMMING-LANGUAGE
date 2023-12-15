@@ -260,5 +260,5 @@ void modify(char str1[], char str2[])
     }
     str2[1] = 'z';
     printf("Length of string 1 is : %d\n", l);
-    printf("Both the strings are : %s %s", str1, str2);
+    printf("Both the strings are : %s and %s\n", str1, str2);
 }
