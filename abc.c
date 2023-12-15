@@ -338,23 +338,6 @@
 //     return 0;
 // }
 
-// #include <stdio.h>
-
-// int sum(int, int);
-
-// void main()
-// {
-//     int s = 0;
-//     int (*ptr)(int, int) = &sum;
-//     s = (*ptr)(8,2);
-//     printf("Sum = %d\n", s);
-// }
-// int sum(int a, int b)
-// {
-//     return a + b;
-// }
-
-
 #include <stdio.h>
 
 int sum(int, int);
@@ -362,11 +345,28 @@ int sum(int, int);
 void main()
 {
     int s = 0;
-    //int (*ptr)(int, int) = &sum;
-    s = sum(20,2);
+    int (*ptr)(int, int) = sum;
+    s = ptr(82,2);
     printf("Sum = %d\n", s);
 }
 int sum(int a, int b)
 {
     return a + b;
 }
+
+
+// #include <stdio.h>
+
+// int sum(int, int);
+
+// void main()
+// {
+//     int s = 0;
+//     //int (*ptr)(int, int) = &sum;
+//     s = sum(20,2);
+//     printf("Sum = %d\n", s);
+// }
+// int sum(int a, int b)
+// {
+//     return a + b;
+// }
