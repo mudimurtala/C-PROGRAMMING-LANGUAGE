@@ -322,18 +322,34 @@
 //     return a;
 // }
 
+// #include <stdio.h>
+
+// void f(int* p, int* q)
+// {
+//     p = q;
+//     *p = 2;
+// }
+// int i = 0, j = 1;
+// int main()
+// {
+//     f(&i, &j);
+//     printf("%d : %d\n", i, j);
+//     getchar();
+//     return 0;
+// }
+
 #include <stdio.h>
 
-void f(int* p, int* q)
+int sum(int, int);
+
+void main()
 {
-    p = q;
-    *p = 2;
+    int s = 0;
+    int (*ptr)(int, int) = &sum;
+    s = (*ptr)(8,2);
+    printf("Sum = %d\n", s);
 }
-int i = 0, j = 1;
-int main()
+int sum(int a, int b)
 {
-    f(&i, &j);
-    printf("%d : %d\n", i, j);
-    getchar();
-    return 0;
+    return a + b;
 }
