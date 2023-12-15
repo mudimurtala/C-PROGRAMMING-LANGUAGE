@@ -287,20 +287,23 @@
 //     printf("Both the strings are : %s and %s\n", str1, str2);
 // }
 
+// #include <stdio.h>
+
+// char* display();
+
+// void main()
+// {
+//     char* str;
+//     str = display();
+//     str[0] = 'z';
+//     printf("String is : %s\n", str);
+// }
+
+// char* display()
+// {
+//     static char str[] = "jenny";
+//     return str;
+// }
+
 #include <stdio.h>
 
-char* display();
-
-void main()
-{
-    char* str;
-    str = display();
-    str[0] = 'z';
-    printf("String is : %s\n", str);
-}
-
-char* display()
-{
-    static char str[] = "jenny";
-    return str;
-}
