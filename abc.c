@@ -394,48 +394,50 @@
 //     display(sub);
 // }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int main()
-{
-    //size --> what do we put?
-    //void* --> how can we get a stronger type?
-    printf("%lu\n", sizeof(int) * 10);
-    int count = 20;
-    int* array = malloc(sizeof(int) * count);
+// int main()
+// {
+//     //size --> what do we put?
+//     //void* --> how can we get a stronger type?
+//     printf("%lu\n", sizeof(int) * 10);
+//     int count = 20;
+//     int* array = malloc(sizeof(int) * count);
 
-    if (array == NULL)
-    {
-        printf("Memory allocation failled.\n");
-        return 1;
-    }
+//     if (array == NULL)
+//     {
+//         printf("Memory allocation failled.\n");
+//         return 1;
+//     }
 
-    count++;
-    int* array2 = realloc(array, sizeof(int) * count);
-    if (array2 == NULL)
-    {
-        printf("New Memory allocation failled...\n");
-        return 1;
-    }
-    else
-    {
-        array = array2;
-    }
+//     count++;
+//     int* array2 = realloc(array, sizeof(int) * count);
+//     if (array2 == NULL)
+//     {
+//         printf("New Memory allocation failled...\n");
+//         return 1;
+//     }
+//     else
+//     {
+//         array = array2;
+//     }
 
 
-    for (int i = 0; i < count; i++)
-    {
-        array[i] = i;
-    }
+//     for (int i = 0; i < count; i++)
+//     {
+//         array[i] = i;
+//     }
 
-    for (int i = 0; i < count; i++)
-    {
-        printf("%i ", array[i]);
-    }
+//     for (int i = 0; i < count; i++)
+//     {
+//         printf("%i ", array[i]);
+//     }
 
-    printf("\n");
+//     printf("\n");
 
-    free(array);
-    return 0;
-}
+//     free(array);
+//     return 0;
+// }
+
+
