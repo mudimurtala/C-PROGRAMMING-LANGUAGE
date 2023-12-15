@@ -402,7 +402,8 @@ int main()
     //size --> what do we put?
     //void* --> how can we get a stronger type?
     //printf("%lu\n", sizeof(int) * 10);
-    int* array = malloc(sizeof(int) * 10);
+    int count = 20;
+    int* array = malloc(sizeof(int) * count);
 
     if (array == NULL)
     {
@@ -410,12 +411,25 @@ int main()
         return 1;
     }
 
-    for (int i = 0; i < 10; i++)
+    count++;
+    int* array2 = realloc(array, sizeof(int) * count);
+    if (array2 == NULL)
+    {
+        printf("New Memory allocation failled...\n");
+        return 1;
+    }
+    else
+    {
+        array = array2;
+    }
+
+
+    for (int i = 0; i < count; i++)
     {
         array[i] = i;
     }
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < count; i++)
     {
         printf("%i ", array[i]);
     }
