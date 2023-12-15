@@ -404,6 +404,12 @@ int main()
     //printf("%lu\n", sizeof(int) * 10);
     int* array = malloc(sizeof(int) * 10);
 
+    if (array == NULL)
+    {
+        printf("Memory allocation failled.\n");
+        return 1;
+    }
+
     for (int i = 0; i < 10; i++)
     {
         array[i] = i;
