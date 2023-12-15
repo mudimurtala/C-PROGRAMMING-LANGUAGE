@@ -223,6 +223,7 @@ void main()
     size = sizeof(marks)/sizeof(marks[0]);
     average = avg(marks, size);
     printf("average = %d\n", average);
+    printf("Inside main size of array is (in bytes) : %ld\n", sizeof(marks));
 }
 
 int avg(int marks1[], int size)
@@ -233,5 +234,7 @@ int avg(int marks1[], int size)
         sum = sum + marks1[i];
     }
     average = sum/size;
+    printf("Inside avg function size of array is (in bytes) : %ld\n", sizeof(marks1));
+
     return average;
 }
