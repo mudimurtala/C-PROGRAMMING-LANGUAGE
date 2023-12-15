@@ -265,7 +265,7 @@
 
 #include <stdio.h>
 
-void modify(char[], char[]);
+void modify(char*, char*);
 
 void main()
 {
@@ -275,7 +275,7 @@ void main()
 
 }
 
-void modify(char str1[], char str2[])
+void modify(char* str1, char* str2)
 {
     int i, l = 0;
     for(i = 0; str1[i] != '\0'; i++)
