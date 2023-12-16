@@ -490,4 +490,35 @@
 //     return (ptArray);
 // }
 
+// #include <stdlib.h>
+
+// char *_strdup(char *str)
+// {
+//     char *ptStr;
+//     /* get length of str */
+//     int str_len = 0;
+//     while (str[str_len] != '\0')
+//     {
+//         str_len++;
+//     }
+//     /* determine size and allocate enough memory for it */
+//     ptStr = malloc((str_len * sizeof(char)) + 1);
+
+//     /* check if malloc doesn't return NULL */
+//     if (ptStr == NULL)
+//     {
+//         return NULL;
+//     }
+
+//     /* copy the str to the new loction */
+//     int count;
+//     for (count = 0; str[count] != '\0'; count++)
+//     {
+//         ptStr[count] = str[count];
+//     }
+
+//     ptStr[count] = '\0';
+
+//     return (ptStr);
+// }
 
