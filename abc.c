@@ -470,22 +470,24 @@
 //     free(a);
 // }
 
-#include <stdlib.h>
+// #include <stdlib.h>
 
 
-char *create_array(unsigned int size, char c)
-{
-    char *ptArray;
-    unsigned int count;
+// char *create_array(unsigned int size, char c)
+// {
+//     char *ptArray;
+//     unsigned int count;
 
-    /* allocating enough space for all array members */
-    ptArray = (char *)malloc(size * sizeof(char));
+//     /* allocating enough space for all array members */
+//     ptArray = (char *)malloc(size * sizeof(char));
 
-    /* put a char c in each of the memory locations */
-    for (count = 0; count < size; count++)
-    {
-        /* assign the char to the specific memory location */
-        ptArray[count] = c;
-    }
-    return (ptArray);
-}
+//     /* put a char c in each of the memory locations */
+//     for (count = 0; count < size; count++)
+//     {
+//         /* assign the char to the specific memory location */
+//         ptArray[count] = c;
+//     }
+//     return (ptArray);
+// }
+
+
