@@ -470,25 +470,25 @@
 //     free(a);
 // }
 
-#include <stdlib.h>
+// #include <stdlib.h>
 
 
-char *create_array(unsigned int size, char c)
-{
-    char *ptArray;
-    unsigned int count;
+// char *create_array(unsigned int size, char c)
+// {
+//     char *ptArray;
+//     unsigned int count;
 
-    /* allocating enough space for all array members */
-    ptArray = (char *)malloc(size * sizeof(char));
+//     /* allocating enough space for all array members */
+//     ptArray = (char *)malloc(size * sizeof(char));
 
-    /* put a char c in each of the memory locations */
-    for (count = 0; count < size; count++)
-    {
-        /* assign the char to the specific memory location */
-        ptArray[count] = c;
-    }
-    return (ptArray);
-}
+//     /* put a char c in each of the memory locations */
+//     for (count = 0; count < size; count++)
+//     {
+//         /* assign the char to the specific memory location */
+//         ptArray[count] = c;
+//     }
+//     return (ptArray);
+// }
 
 // #include <stdlib.h>
 
@@ -521,4 +521,30 @@ char *create_array(unsigned int size, char c)
 
 //     return (ptStr);
 // }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, i, *ptr;
+    printf("Enter total no of values : ");
+    scanf("%d", &n);
+
+    ptr = (int *)malloc(n * sizeof(int));
+
+    printf("\nEnter the values : ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", (ptr + i));
+    }
+
+    printf("\nThe entered values are : ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d\n", *(ptr + i));
+    }
+
+    free(ptr);
+}
 
