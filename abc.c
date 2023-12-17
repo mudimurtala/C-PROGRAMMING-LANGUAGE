@@ -665,7 +665,7 @@ struct abc {
 int main()
 {
     struct abc a = {.z = 90, .y = 60, .x = 30};
-    printf("%d, %d, %d", a.x, a.y, a.z);
+    printf("%d, %d, %d\n", a.x, a.y, a.z);
 
     return 0;
 }
