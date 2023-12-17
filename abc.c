@@ -684,7 +684,7 @@ int main()
 {
     struct car c[2];
     int i;
-    for (i = 0; i < 2; i++);
+    for (i = 0; i < 2; i++)
     {
         printf("Enter the car %d fuel tank capacity: ", i + 1);
         scanf("%d", &c[i].fuel_tank_cap);
@@ -696,7 +696,7 @@ int main()
     }
 
     printf("\n");
-    for (i = 0; i < 2; i++);
+    for (i = 0; i < 2; i++)
     {
         printf("\nCar %d details: \n", i + 1);
         printf("Fuel tank capacity: %d\n", c[i].fuel_tank_cap);
