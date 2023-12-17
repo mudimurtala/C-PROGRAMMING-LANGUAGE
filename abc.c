@@ -654,19 +654,24 @@
 
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct abc {
-    int x;
-    int y;
-    int z;
-};
+// struct abc {
+//     int x;
+//     int y;
+//     int z;
+// };
 
-int main()
-{
-    struct abc a = {.z = 90, .y = 60, .x = 30};
-    printf("%d, %d, %d\n", a.x, a.y, a.z);
+// int main()
+// {
+//     struct abc a = {.z = 90, .y = 60, .x = 30};
+//     printf("%d, %d, %d\n", a.x, a.y, a.z);
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
 
