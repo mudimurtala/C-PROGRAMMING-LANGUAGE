@@ -627,5 +627,15 @@
 
 
 
+// struct abc {
+//     int p;
+//     int q;
+// };
+
+// int main()
+// {
+//     struct abc x = {23, 24};
+// }
+
 
 
