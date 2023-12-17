@@ -700,7 +700,7 @@ int main()
     {
         printf("\nCar %d details: \n", i + 1);
         printf("Fuel tank capacity: %d\n", c[i].fuel_tank_cap);
-        prinf("seating capacity: %d\n", c[i].seating_cap);
+        printf("seating capacity: %d\n", c[i].seating_cap);
         printf("city mileage: %f\n", c[i].city_mileage);
     }
 
