@@ -724,6 +724,20 @@
 //     return 0;
 // }
 
+#include <stdio.h>
+
+struct abc
+{
+    char a;
+    int b;
+    char c;
+} var;
+
+int main()
+{
+    printf("%ld\n", sizeof(var));
+    return 0;
+}
 
 
 
