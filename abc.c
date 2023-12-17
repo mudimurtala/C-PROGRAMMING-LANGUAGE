@@ -741,21 +741,37 @@
 // }
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Ournode
+// struct Ournode
+// {
+//     char x, y, z;
+// };
+
+// int main()
+// {
+
+//     struct Ournode p = {'1', '0', 'a' + 2};
+//     struct Ournode *q = &p;
+//     printf("%c %c\n", *((char*) q + 1), *((char*) q + 2));
+
+//     return 0;
+// }
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
 {
-    char x, y, z;
+    int data;
+    struct node *link;
 };
 
 int main()
 {
-
-    struct Ournode p = {'1', '0', 'a' + 2};
-    struct Ournode *q = &p;
-    printf("%c %c\n", *((char*) q + 1), *((char*) q + 2));
-
-    return 0;
+    struct node *head = (struct node *)malloc(sizeof(struct node));
+    head->data = 45;
+    head->link = NULL;
 }
 
 
