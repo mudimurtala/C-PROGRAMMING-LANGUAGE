@@ -579,8 +579,8 @@ int main()
     scanf("%d", &emp1.salary);
     printf("Enter the salary of employee2: ");
     scanf("%d", &emp2.salary);
-    printf("Employee 1 salary is; %d\n", emp1.salary);
-    printf("Employee 2 salary is; %d\n", emp2.salary);
+    printf("Employee 1 salary is: %d\n", emp1.salary);
+    printf("Employee 2 salary is: %d\n", emp2.salary);
     printf("Manager's salary is: %d\n", manager());
     return 0;
 
