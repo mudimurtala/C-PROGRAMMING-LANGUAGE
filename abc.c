@@ -637,5 +637,22 @@
 //     struct abc x = {23, 24};
 // }
 
+// struct car {
+//     char engine[50];
+//     char fuel_type[10];
+//     int fuel_tank_cap;
+//     int seating_cap;
+//     float city_mileage;
+// };
+
+// int main()
+// {
+//     struct car c1 = {"DDis 190 Engine", "Diesel", 37, 5, 19.74};
+//     struct car c2 = {"Kappa", "Petrol", 22, 8, 14.5};
+//     // two cars with the same properties but different values
+// }
+
+
+
 
 
