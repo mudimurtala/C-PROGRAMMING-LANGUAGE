@@ -758,42 +758,84 @@
 //     return 0;
 // }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-struct node
-{
-    int data;
-    struct node *link;
-};
+// struct node
+// {
+//     int data;
+//     struct node *link;
+// };
 
-int main()
-{
-    struct node *head = (struct node *)malloc(sizeof(struct node));
-    head->data = 45;
-    head->link = NULL;
+// int main()
+// {
+//     struct node *head = (struct node *)malloc(sizeof(struct node));
+//     head->data = 45;
+//     head->link = NULL;
 
-    struct node *current = (struct node *)malloc(sizeof(struct node));
-    current->data = 98;
-    current->link = NULL;
-    head->link = current;
+//     struct node *current = (struct node *)malloc(sizeof(struct node));
+//     current->data = 98;
+//     current->link = NULL;
+//     head->link = current;
 
-    // struct node *current2 = (struct node *)malloc(sizeof(struct node));
-    // current2->data = 3;
-    // current2->link = NULL;
-    // current->link = current2;
+//     current = (struct node *)malloc(sizeof(struct node));
+//     current->data = 3;
+//     current->link = NULL;
 
-    current = (struct node *)malloc(sizeof(struct node));
-    current->data = 3;
-    current->link = NULL;
+//     head->link->link = current;
 
-    head->link->link = current;
+//     return 0;
 
-    return 0;
-
-}
+// }
 
 
+
+
+// void count_of_nodes(struct node *head)
+// {
+//     int count = 0;
+//     if (head == NULL)
+//         printf("Linked List is empty");
+//     struct node *ptr = NULL;
+//     ptr = head;
+//     while (ptr != NULL)
+//     {
+//         count++;
+//         ptr = ptr->link;
+//     }
+//     printf("%d", count);
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// struct node
+// {
+//     int data;
+//     struct node *link;
+// };
+
+// int main()
+// {
+//     print_data(head);
+// }
+
+
+
+
+// void print_data(struct node *head)
+// {
+//     if (head == NULL)
+//         printf("Linked List is empty");
+//     struct node *ptr =NULL;
+//     ptr = head;
+//     while (ptr != NULL)
+//     {
+//         printf("%d ", ptr->data);
+//         ptr = ptr->link;
+//     }
+// }
 
 
 
