@@ -724,20 +724,23 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
+// #pragma pack(1)
 
-struct abc
-{
-    char a;
-    int b;
-    char c;
-} var;
+// struct abc
+// {
+//     char a;
+//     char c;
+//     int b;
+// } var;
 
-int main()
-{
-    printf("%ld\n", sizeof(var));
-    return 0;
-}
+// int main()
+// {
+//     printf("%ld\n", sizeof(var));
+//     return 0;
+// }
+
+
 
 
 
