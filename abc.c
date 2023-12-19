@@ -992,7 +992,7 @@ int main()
 void push()
 {
     int element;
-    if(top == LIMIT -1)
+    if(top == LIMIT- 1)
     {
         printf("Stack underflow\n");
     }
@@ -1015,7 +1015,7 @@ void pop()
     else
     {
         element = stack[top];
-        printf("The deleted itemis %d\n", stack[top]);
+        printf("The deleted item is %d\n", stack[top]);
         top--;
     }
 }
@@ -1023,6 +1023,10 @@ void pop()
 void display()
 {
     if(top == -1)
+    {
+        printf("Stack underflow\n");
+    }
+    else if(top > 0)
     {
         printf("The elements of the stack are: \n");
         for (i = top; i >= 0; i--)
