@@ -980,7 +980,7 @@ int main()
             case 4:
             exit(0);
             default:
-            printf("Sorry, Invald choise!\n");
+            printf("Sorry, Invald choice!\n");
             break;
         }
     }
