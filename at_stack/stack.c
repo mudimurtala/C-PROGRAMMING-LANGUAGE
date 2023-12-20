@@ -53,6 +53,6 @@ int main()
     push(50);
     // data = pop();
     data = pop();
-    printf("%d", data);
+    printf("%d\n", data);
     return 0;
 }
