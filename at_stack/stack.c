@@ -52,7 +52,7 @@ int main()
     push(40);
     push(50);
     // data = pop();
-    // data = pop();
-    print();
+    data = pop();
+    printf("%d", data);
     return 0;
 }
