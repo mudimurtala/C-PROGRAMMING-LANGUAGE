@@ -51,8 +51,8 @@ int main()
     push(22);
     push(40);
     push(50);
-    data = pop();
-    data = pop();
+    // data = pop();
+    // data = pop();
     print();
     return 0;
 }
