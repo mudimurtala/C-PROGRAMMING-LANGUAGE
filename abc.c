@@ -947,19 +947,19 @@
 
 int stack[LIMIT]; // Array imlementation of stack
 int top; // to insert and delete the data elements in the stack
-int i; // to traverse the loop to while displaying the
+int i; // to traverse the loop to while displaying the stack
 int choice; // to choose either of the 3 stack operations
 
-void push();
-void pop();
-void display();
+void push(); // function used to insert the element into the stack
+void pop(); // function used to delete the element from the stack
+void display(); // function used to display all the elements in the stack
 
 int main()
 {
     printf("Welcome to DataFlair tutorials!\n\n");
 
     printf("ARRAY IMPLEMENTATION USING STACKS\n\n");
-    top = -1;
+    top = -1; // initializing top to -1 indicates that it is empty
     do
     {
         printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n\n");
@@ -1016,7 +1016,7 @@ void pop()
     {
         element = stack[top];
         printf("The deleted item is %d\n", stack[top]);
-        top--;
+        top--; // the element below the top most element is deleted
     }
 }
 
@@ -1024,12 +1024,12 @@ void display()
 {
     if(top == -1)
     {
-        printf("Stack underflow\n");
+        printf("Stack underflow\n"); // stack is empty
     }
     else if(top > 0)
     {
         printf("The elements of the stack are: \n");
-        for (i = top; i >= 0; i--)
+        for (i = top; i >= 0; i--) // top to bottom traversal
         {
             printf("%d\n", stack[i]);
         }
