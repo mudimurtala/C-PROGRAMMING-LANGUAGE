@@ -22,5 +22,9 @@ int main()
     push(22);
     push(40);
     push(50);
+    for (int i = 0; i < MAX; i++)
+    {
+        printf("%d\n", stack_arr[i]);
+    }
     return 0;
 }
