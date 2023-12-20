@@ -12,7 +12,7 @@ void push(int data)
         printf("stack overflow\n");
         return; // indicates the end of the function
     }
-    top = top + 1;
+    top += 1;
     stack_arr[top] = data;
 }
 
@@ -22,10 +22,5 @@ int main()
     push(22);
     push(40);
     push(50);
-
-    for (int i = 0; i < MAX; i++)
-    {
-        printf("%d\n", stack_arr[i]);
-    }
     return 0;
 }
