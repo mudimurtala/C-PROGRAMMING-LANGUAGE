@@ -969,19 +969,19 @@ int main()
         switch(choice)
         {
             case 1:
-            push();
-            break;
+                push();
+                break;
             case 2:
-            pop();
-            break;
+                pop();
+                break;
             case 3:
-            display();
-            break;
+                display();
+                break;
             case 4:
-            exit(0);
+                exit(0);
             default:
-            printf("Sorry, Invald choice!\n");
-            break;
+                printf("Sorry, Invald choice!\n");
+                break;
         }
     }
 
