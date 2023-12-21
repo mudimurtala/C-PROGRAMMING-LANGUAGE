@@ -110,11 +110,16 @@ void main()
     printf("Enter age: ");
     scanf("%d", &age);
 
-    if (age > 20 && age < 30)
+    if (age > 25 && age < 30)                                                                                           
     {
-        printf("Your age is: %d", age);
-        printf("You can go coffee with me");
+        printf("Age: %d\n", age);
+        printf("Coffee with me");
     }
-printf("It is time to go home");
+    else
+    {
+        printf("Age: %d\n", age);
+        printf("Go home");
+    }
+printf("out of if block");
 
 }
