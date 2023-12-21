@@ -102,3 +102,19 @@
 
 
 
+#include <stdio.h>
+
+void main()
+{
+    int age;
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if (age > 20 && age < 30)
+    {
+        printf("Your age is: %d", age);
+        printf("You can go coffee with me");
+    }
+printf("It is time to go home");
+
+}
