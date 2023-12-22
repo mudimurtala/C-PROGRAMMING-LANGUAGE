@@ -102,31 +102,33 @@
 
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void main()
-{
-    int age;
-    int lesson;
-    printf("Enter age and lesson: ");
-    scanf("%d %d", &age, &lesson);
+// void main()
+// {
+//     int age;
+//     int lesson;
+//     printf("Enter age and lesson: ");
+//     scanf("%d %d", &age, &lesson);
 
-    if (age > 5)
-    {
-        if (lesson == 1)
-        {
-        printf("Her age is greater than 5, and she's going to lesson, she should then be given 10 biscuits");
-        }
-        else
-        {
-            printf("Her age is greater than 5, but she's not going to lesson, she should then be given 5 biscuits");
-        }
-    }
-    else
-    {
-        printf("She's still small, just givee her 2 biscuits");
-    }
+//     if (age > 5)
+//     {
+//         if (lesson == 1)
+//         {
+//         printf("Her age is greater than 5, and she's going to lesson, she should then be given 10 biscuits");
+//         }
+//         else
+//         {
+//             printf("Her age is greater than 5, but she's not going to lesson, she should then be given 5 biscuits");
+//         }
+//     }
+//     else
+//     {
+//         printf("She's still small, just givee her 2 biscuits");
+//     }
     
 
 
-}
+// }
+
+
