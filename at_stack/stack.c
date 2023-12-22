@@ -107,21 +107,26 @@
 void main()
 {
     int age;
-    printf("Enter age: ");
-    scanf("%d", &age);
+    int lesson;
+    printf("Enter age and lesson: ");
+    scanf("%d %d", &age, &lesson);
 
-    if (age > 25 && age < 30)                                                                                           
+    if (age > 5)
     {
-        printf("Age: %d\n", age);
-        printf("Coffee with me\n");
+        if (lesson == 1)
+        {
+        printf("Her age is greater than 5, and she's going to lesson, she should then be given 10 biscuits");
+        }
+        else
+        {
+            printf("Her age is greater than 5, but she's not going to lesson, she should then be given 5 biscuits");
+        }
     }
     else
     {
-
-        printf("Age: %d\n", age);
-       printf("Go home\n");
+        printf("She's still small, just givee her 2 biscuits");
     }
     
-printf("out of if block\n");
+
 
 }
