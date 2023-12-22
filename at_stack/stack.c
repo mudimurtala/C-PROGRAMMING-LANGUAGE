@@ -132,23 +132,46 @@
 // }
 
 
+// #include <stdio.h>
+
+// void main()
+// {
+//     int marks;
+//     printf("Enter marks: ");
+//     scanf("%d", &marks);
+
+
+//     if (marks >= 80)
+//         printf("Grade is A\n");
+//     else if (marks >= 70)
+//         printf("Grade is B\n");
+//     else if (marks >= 60)
+//         printf("Grade is C\n");
+//     else
+//         printf("Grade is D\n");
+//     printf("End of program\n");
+    
+// }
+
+
 #include <stdio.h>
 
 void main()
 {
-    int marks;
-    printf("Enter marks: ");
-    scanf("%d", &marks);
+    char ch;
+    printf("Enter Character: ");
+    scanf("%c", &ch);
 
-
-    if (marks >= 80)
-        printf("Grade is A");
-    else if (marks >= 70)
-        printf("Grade is B");
-    else if (marks >= 60)
-        printf("Grade is C");
-    else
-        printf("Grade is D");
-    printf("End of program");
-    
+    switch (ch)
+    {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            printf("Vowel\n");
+            break;
+        default:
+            printf("Not Vowel\n");
+    }
 }
