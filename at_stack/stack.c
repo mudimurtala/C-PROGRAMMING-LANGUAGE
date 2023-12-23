@@ -299,16 +299,19 @@
 //         printf("i = %d\n", i);
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void main()
-{
-    int number, i, mul;
-    printf("Enter a number: ");
-    scanf("%d", &number);
-    for (i = 1; i <= 12; i++)
-    {
-        mul = number * i;
-        printf("%d x %d = %d\n", number, i, mul);
-    }
-}
+// void main()
+// {
+//     int number, i, mul;
+//     printf("Enter a number: ");
+//     scanf("%d", &number);
+//     for (i = 1; i <= 12; i++)
+//     {
+//         mul = number * i;
+//         printf("%d x %d = %d\n", number, i, mul);
+//     }
+// }
+
+
+
