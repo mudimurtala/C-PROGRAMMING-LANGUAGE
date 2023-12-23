@@ -154,24 +154,161 @@
 // }
 
 
+// #include <stdio.h>
+
+// void main()
+// {
+//     char ch;
+//     printf("Enter Character: ");
+//     scanf("%c", &ch);
+
+//     switch (ch)
+//     {
+//         case 'a':
+//         case 'e':
+//         case 'i':
+//         case 'o':
+//         case 'u':
+//             printf("Vowel\n");
+//             break;
+//         default:
+//             printf("Not Vowel\n");
+//     }
+// }
+
+// #include <stdio.h>
+
+// void main()
+// {
+//     int a;
+//     printf("Enter a: ");
+//     scanf("%d", &a);
+    
+//     switch (a)
+//     {
+//     case 10:
+//         printf("Mudi");
+//         break;
+//     case 20:
+//         printf("Murtala Daura");
+//         break;
+//     default:
+//         printf("The default Part");
+//         break;
+//     case 45:
+//         printf("Murtala is really a Software Engineer");
+//         break;
+//     }
+
+//     printf("This is not part of the switch statement");
+// }
+
+
+
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     float marks;
+//     printf("Enter marks: ");
+//     scanf("%f", &marks);
+
+
+//     switch (marks / 10.0)
+//     {
+//         case 10.0:
+//         case 9.0:
+//         case 8.0:
+//         case 7.5:
+//             printf("Grade is A1\n");
+//             break;
+//         case 7.0:
+//             printf("Grade is B2\n");
+//             break;
+//         case 6.5:
+//             printf("Grade is B3\n");
+//             break;
+//         case 6.0:
+//             printf("Grade is C4\n");
+//             break;
+//         case 5.5:
+//             printf("Grade is C5\n");
+//             break;
+//         case 5.0:
+//             printf("Grade is C6\n");
+//             break;
+//         case 4.5:
+//             printf("Grade is D7\n");
+//             break;
+//         case 4.0:
+//             printf("Grade is E8\n");
+//             break;
+//         default:
+//             printf("Grade is F9\n");
+//     }
+
+//     return 0;
+
+// }
+
+
+// #include <stdio.h>
+
+// void main()
+// {
+//     int a, b, sum, sub, mul, div;
+//     char operator;
+//     printf("Enter operator: ");
+//     scanf("%c", &operator);
+//     printf("Enter two operands: ");
+//     scanf("%d %d", &a, &b);
+
+//     switch (operator)
+//     {
+//         case '+':
+//             sum = a + b;
+//             printf("Addition is: %d", sum);
+//             break;
+//         case '-':
+//             sub = a - b;
+//             printf("Difference is: %d", sub);
+//             break;
+//         case '*':
+//             mul = a * b;
+//             printf("Product is: %d", mul);
+//             break;
+//         case '/':
+//             div = a / b;
+//             printf("Division is: %d", div);
+//             break;
+//         default:
+//             printf("Enter valid operator");
+
+//     }
+// }
+
+
+// #include <stdio.h>
+
+// void main()
+// {
+//     int i;
+//     for (i = 10; i < 10; i++)
+//         printf("i = %d\n", i);
+// }
+
 #include <stdio.h>
 
 void main()
 {
-    char ch;
-    printf("Enter Character: ");
-    scanf("%c", &ch);
-
-    switch (ch)
+    int number, i, mul;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    for (i = 1; i <= 12; i++)
     {
-        case 'a':
-        case 'e':
-        case 'i':
-        case 'o':
-        case 'u':
-            printf("Vowel\n");
-            break;
-        default:
-            printf("Not Vowel\n");
+        mul = number * i;
+        printf("%d x %d = %d\n", number, i, mul);
     }
 }
