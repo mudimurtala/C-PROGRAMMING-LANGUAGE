@@ -699,7 +699,7 @@ void add(int new)
     container[tool] = new;
 }
 
-int remove()
+int remove(int removable)
 {
     int removable;
     if (isEmpty())
