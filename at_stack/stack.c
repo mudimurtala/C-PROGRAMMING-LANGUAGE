@@ -385,16 +385,150 @@
 
 
 
+
+
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #define MAX 5
+
+// int stack_arr[MAX];
+// int first = -1;
+
+// int isFull()
+// {
+//     if (first == MAX -1)
+//         return 1;
+//     else
+//         return 0;
+// }
+
+// int isEmpty()
+// {
+//     if (first == -1)
+//         return 1;
+//     else
+//         return 0;
+// }
+
+// void push(int data)
+// {
+//     int i;
+//     if (isFull())
+//     {
+//         printf("Stack Overflow\n");
+//         exit(1);
+//     }
+//     first += 1;
+//     for (i = first; i > 0; i--)
+//         stack_arr[i] = stack_arr[i - 1];
+//     stack_arr[0] = data;
+// }
+
+// int pop()
+// {
+//     int i, value;
+//     if (isEmpty())
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+//     value = stack_arr[0];
+//     for (i = 0; i < first; i++)
+//         stack_arr[i] = stack_arr[i + 1];
+//     first -= 1;
+//     return value;
+// }
+
+// int peek()
+// {
+//     if (isEmpty())
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+//     return stack_arr[0];
+// }
+
+// void print()
+// {
+//     int i;
+//     if (first == -1)
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+//     for (i = 0; i <= first; i++)
+//         printf("%d ", stack_arr[i]);
+//     printf("\n");
+// }
+
+// int main()
+// {
+//     int choice, data;
+//     while(1)
+//     {
+//         printf("\n");
+//         printf("1. Push\n");
+//         printf("2. Pop\n");
+//         printf("3. Print the top element\n");
+//         printf("4. Print all the elements of the stack\n");
+//         printf("5. Quit\n");
+//         printf("Please enter your choice: ");
+//         scanf("%d", &choice);
+
+//         switch (choice)
+//         {
+//             case 1:
+//                 printf("Enter the element to be pushed: ");
+//                 scanf("%d", &data);
+//                 push(data);
+//                 break;
+
+//             case 2:
+//                 data = pop();
+//                 printf("Deleted element is %d\n", data);
+//                 break;
+
+//             case 3:
+//                 printf("The topmost element of the stack is %d\n", peek());
+//                 break;
+
+//             case 4:
+//                 print();
+//                 break;
+
+//             default:
+//                 printf("Wrong choice\n");
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Prime factorization program  */
+
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 5
+#define MAX 10
 
-int stack_arr[MAX];
-int first = -1;
+int stack[MAX];
+int top = -1;
 
 int isFull()
 {
-    if (first == MAX -1)
+    if (top == MAX -1)
         return 1;
     else
         return 0;
@@ -402,13 +536,13 @@ int isFull()
 
 int isEmpty()
 {
-    if (first == -1)
+    if (top == -1)
         return 1;
     else
         return 0;
 }
 
-void push(int data)
+void push(int n)
 {
     int i;
     if (isFull())
@@ -416,92 +550,108 @@ void push(int data)
         printf("Stack Overflow\n");
         exit(1);
     }
-    first += 1;
-    for (i = first; i > 0; i--)
-        stack_arr[i] = stack_arr[i - 1];
-    stack_arr[0] = data;
+    top += 1;
+    stack[top] = n;
 }
 
 int pop()
 {
-    int i, value;
+    int val;
     if (isEmpty())
     {
         printf("Stack Underflow\n");
         exit(1);
     }
-    value = stack_arr[0];
-    for (i = 0; i < first; i++)
-        stack_arr[i] = stack_arr[i + 1];
-    first -= 1;
-    return value;
+    val = stack[top];
+    top -= 1;
+    return val;
 }
 
-int peek()
+void prime_fact(int num)
 {
-    if (isEmpty())
+    int i = 2;
+    // push all the prime factors of a number onto stack
+    while (num != 1)
     {
-        printf("Stack Underflow\n");
-        exit(1);
+        while (num % i == 0)
+        {
+            push(i);
+            num = num / i;
+        }
+        i++;
     }
-    return stack_arr[0];
-}
 
-void print()
-{
-    int i;
-    if (first == -1)
+    // pop all the prime factors from the stack and print
+    printf("Prime factors of the number in descending order are as follows: ");
+    while (top != -1)
     {
-        printf("Stack Underflow\n");
-        exit(1);
+        printf("\n%d\n", pop());
+
     }
-    for (i = 0; i <= first; i++)
-        printf("%d ", stack_arr[i]);
-    printf("\n");
 }
 
 int main()
 {
-    int choice, data;
-    while(1)
-    {
-        printf("\n");
-        printf("1. Push\n");
-        printf("2. Pop\n");
-        printf("3. Print the top element\n");
-        printf("4. Print all the elements of the stack\n");
-        printf("5. Quit\n");
-        printf("Please enter your choice: ");
-        scanf("%d", &choice);
+    int number;
+    printf("Please enter a positive number: ");
+    scanf("%d", &number);
 
-        switch (choice)
-        {
-            case 1:
-                printf("Enter the element to be pushed: ");
-                scanf("%d", &data);
-                push(data);
-                break;
-
-            case 2:
-                data = pop();
-                printf("Deleted element is %d\n", data);
-                break;
-
-            case 3:
-                printf("The topmost element of the stack is %d\n", peek());
-                break;
-
-            case 4:
-                print();
-                break;
-
-            default:
-                printf("Wrong choice\n");
-        }
-    }
+    prime_fact(number);
     return 0;
 }
 
 
 
 
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define CAPACITY 6
+
+int container[CAPACITY];
+int tool = -1;
+
+void add(int new)
+{
+    if (tool == CAPACITY -1)
+    {
+        printf("Stack Overflow");
+        exit(1);
+    }
+    tool = tool + 1;
+    container[tool] = new;
+}
+
+int remove()
+{
+    int removable;
+    if (tool == -1)
+    {
+        printf("Stack Underflow");
+        exit(1);
+    }
+    removable = container[tool];
+    tool = tool - 1;
+    return removable;
+}
+
+void print()
+{
+    if (tool == -1)
+    {
+        printf("Stack Underflow\n");
+        exit(1);
+    }
+
+    for (int i = tool; i >= 0; i--)
+    {
+        printf("%d ", container[i]);
+    }
+    printf("\n");
+}
