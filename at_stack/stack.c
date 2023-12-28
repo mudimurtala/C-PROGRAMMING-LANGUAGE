@@ -667,14 +667,30 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define CAPACITY 6
+#define CAPACITY 100
 
 int container[CAPACITY];
 int tool = -1;
 
+int isFull()
+{
+    if (tool == CAPACITY - 1)
+        return 1;
+    else
+        return 0;
+}
+
+int isEmpty()
+{
+    if (tool == -1)
+        return 1;
+    else
+        return 0;
+}
+
 void add(int new)
 {
-    if (tool == CAPACITY -1)
+    if (isFull())
     {
         printf("Stack Overflow");
         exit(1);
@@ -686,7 +702,7 @@ void add(int new)
 int remove()
 {
     int removable;
-    if (tool == -1)
+    if (isEmpty())
     {
         printf("Stack Underflow");
         exit(1);
@@ -696,17 +712,37 @@ int remove()
     return removable;
 }
 
+void dec2bin(int n)
+{
+    // print all remainder onto stack
+    while (n != 0)
+    {
+        push (n % 2);
+        n = n / 2;
+    }
+}
+
 void print()
 {
-    if (tool == -1)
+    if (isEmpty())
     {
         printf("Stack Underflow\n");
         exit(1);
     }
-
-    for (int i = tool; i >= 0; i--)
+    while (!isEmpty())
     {
-        printf("%d ", container[i]);
+        printf("%d", remove());
     }
-    printf("\n");
+}
+
+int main()
+{
+    int dec;
+    printf("Enter the decimal number: ");
+    scanf("%d", &dec);
+
+    dec2bin(dec);
+    print();
+
+    return 0;
 }
