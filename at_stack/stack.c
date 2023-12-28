@@ -664,86 +664,94 @@
 
 
 
-/*   Converting decimal to binary using stack   */
-#include <stdio.h>
-#include <stdlib.h>
-#define CAPACITY 100
+// /*   Converting decimal to binary using stack   */
+// #include <stdio.h>
+// #include <stdlib.h>
+// #define CAPACITY 100
 
-int container[CAPACITY];
-int tool = -1;
+// int container[CAPACITY];
+// int tool = -1;
 
-int isFull()
-{
-    if (tool == CAPACITY - 1)
-        return 1;
-    else
-        return 0;
-}
+// int isFull()
+// {
+//     if (tool == CAPACITY - 1)
+//         return 1;
+//     else
+//         return 0;
+// }
 
-int isEmpty()
-{
-    if (tool == -1)
-        return 1;
-    else
-        return 0;
-}
+// int isEmpty()
+// {
+//     if (tool == -1)
+//         return 1;
+//     else
+//         return 0;
+// }
 
-void add(int new)
-{
-    if (isFull())
-    {
-        printf("Stack Overflow");
-        exit(1);
-    }
-    tool = tool + 1;
-    container[tool] = new;
-}
+// void add(int new)
+// {
+//     if (isFull())
+//     {
+//         printf("Stack Overflow");
+//         exit(1);
+//     }
+//     tool = tool + 1;
+//     container[tool] = new;
+// }
 
-int remov()
-{
-    int removable;
-    if (isEmpty())
-    {
-        printf("Stack Underflow");
-        exit(1);
-    }
-    removable = container[tool];
-    tool = tool - 1;
-    return removable;
-}
+// int remov()
+// {
+//     int removable;
+//     if (isEmpty())
+//     {
+//         printf("Stack Underflow");
+//         exit(1);
+//     }
+//     removable = container[tool];
+//     tool = tool - 1;
+//     return removable;
+// }
 
-void dec2bin(int n)
-{
-    // print all remainder onto stack
-    while (n != 0)
-    {
-        add (n % 2);
-        n = n / 2;
-    }
-}
+// void dec2bin(int n)
+// {
+//     // print all remainder onto stack
+//     while (n != 0)
+//     {
+//         add (n % 2);
+//         n = n / 2;
+//     }
+// }
 
-void print()
-{
-    if (isEmpty())
-    {
-        printf("Stack Underflow\n");
-        exit(1);
-    }
-    while (!isEmpty())
-    {
-        printf("%d", remov());
-    }
-}
+// void print()
+// {
+//     if (isEmpty())
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+//     while (!isEmpty())
+//     {
+//         printf("%d", remov());
+//     }
+// }
 
-int main()
-{
-    int dec;
-    printf("Enter the decimal number: ");
-    scanf("%d", &dec);
+// int main()
+// {
+//     int dec;
+//     printf("Enter the decimal number: ");
+//     scanf("%d", &dec);
 
-    dec2bin(dec);
-    print();
-    printf("\n");
+//     dec2bin(dec);
+//     print();
+//     printf("\n");
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
