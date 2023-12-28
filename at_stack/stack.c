@@ -743,6 +743,7 @@ int main()
 
     dec2bin(dec);
     print();
+    printf("\n");
 
     return 0;
 }
