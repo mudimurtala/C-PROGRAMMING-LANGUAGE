@@ -610,6 +610,61 @@
 
 
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// #define CAPACITY 6
+
+// int container[CAPACITY];
+// int tool = -1;
+
+// void add(int new)
+// {
+//     if (tool == CAPACITY -1)
+//     {
+//         printf("Stack Overflow");
+//         exit(1);
+//     }
+//     tool = tool + 1;
+//     container[tool] = new;
+// }
+
+// int remove()
+// {
+//     int removable;
+//     if (tool == -1)
+//     {
+//         printf("Stack Underflow");
+//         exit(1);
+//     }
+//     removable = container[tool];
+//     tool = tool - 1;
+//     return removable;
+// }
+
+// void print()
+// {
+//     if (tool == -1)
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+
+//     for (int i = tool; i >= 0; i--)
+//     {
+//         printf("%d ", container[i]);
+//     }
+//     printf("\n");
+// }
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #define CAPACITY 6
