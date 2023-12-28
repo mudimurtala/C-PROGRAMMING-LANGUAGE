@@ -699,7 +699,7 @@ void add(int new)
     container[tool] = new;
 }
 
-int remove()
+int remov()
 {
     int removable;
     if (isEmpty())
@@ -731,7 +731,7 @@ void print()
     }
     while (!isEmpty())
     {
-        printf("%d", remove());
+        printf("%d", remov());
     }
 }
 
