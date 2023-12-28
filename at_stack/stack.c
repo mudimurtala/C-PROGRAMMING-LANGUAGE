@@ -519,86 +519,86 @@
 
 /*  Prime factorization program  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#define MAX 10
+// #include <stdio.h>
+// #include <stdlib.h>
+// #define MAX 10
 
-int stack[MAX];
-int top = -1;
+// int stack[MAX];
+// int top = -1;
 
-int isFull()
-{
-    if (top == MAX -1)
-        return 1;
-    else
-        return 0;
-}
+// int isFull()
+// {
+//     if (top == MAX -1)
+//         return 1;
+//     else
+//         return 0;
+// }
 
-int isEmpty()
-{
-    if (top == -1)
-        return 1;
-    else
-        return 0;
-}
+// int isEmpty()
+// {
+//     if (top == -1)
+//         return 1;
+//     else
+//         return 0;
+// }
 
-void push(int n)
-{
-    int i;
-    if (isFull())
-    {
-        printf("Stack Overflow\n");
-        exit(1);
-    }
-    top += 1;
-    stack[top] = n;
-}
+// void push(int n)
+// {
+//     int i;
+//     if (isFull())
+//     {
+//         printf("Stack Overflow\n");
+//         exit(1);
+//     }
+//     top += 1;
+//     stack[top] = n;
+// }
 
-int pop()
-{
-    int val;
-    if (isEmpty())
-    {
-        printf("Stack Underflow\n");
-        exit(1);
-    }
-    val = stack[top];
-    top -= 1;
-    return val;
-}
+// int pop()
+// {
+//     int val;
+//     if (isEmpty())
+//     {
+//         printf("Stack Underflow\n");
+//         exit(1);
+//     }
+//     val = stack[top];
+//     top -= 1;
+//     return val;
+// }
 
-void prime_fact(int num)
-{
-    int i = 2;
-    // push all the prime factors of a number onto stack
-    while (num != 1)
-    {
-        while (num % i == 0)
-        {
-            push(i);
-            num = num / i;
-        }
-        i++;
-    }
+// void prime_fact(int num)
+// {
+//     int i = 2;
+//     // push all the prime factors of a number onto stack
+//     while (num != 1)
+//     {
+//         while (num % i == 0)
+//         {
+//             push(i);
+//             num = num / i;
+//         }
+//         i++;
+//     }
 
-    // pop all the prime factors from the stack and print
-    printf("Prime factors of the number in descending order are as follows: ");
-    while (top != -1)
-    {
-        printf("\n%d\n", pop());
+//     // pop all the prime factors from the stack and print
+//     printf("Prime factors of the number in descending order are as follows: ");
+//     while (top != -1)
+//     {
+//         printf("\n%d\n", pop());
 
-    }
-}
+//     }
+// }
 
-int main()
-{
-    int number;
-    printf("Please enter a positive number: ");
-    scanf("%d", &number);
+// int main()
+// {
+//     int number;
+//     printf("Please enter a positive number: ");
+//     scanf("%d", &number);
 
-    prime_fact(number);
-    return 0;
-}
+//     prime_fact(number);
+//     return 0;
+// }
 
 
 
