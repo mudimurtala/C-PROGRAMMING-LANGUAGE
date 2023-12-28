@@ -717,7 +717,7 @@ void dec2bin(int n)
     // print all remainder onto stack
     while (n != 0)
     {
-        push (n % 2);
+        add (n % 2);
         n = n / 2;
     }
 }
