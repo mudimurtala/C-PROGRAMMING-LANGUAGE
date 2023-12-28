@@ -664,7 +664,7 @@
 
 
 
-
+/*   Converting decimal to binary using stack   */
 #include <stdio.h>
 #include <stdlib.h>
 #define CAPACITY 100
