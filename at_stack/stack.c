@@ -775,16 +775,41 @@
 
 
 
+
+
+// #include <stdio.h>
+
+// struct point
+// {
+//     int x, y, z;
+// };
+
+// int main()
+// {
+//     struct point p1 = {.y = 0, .z = 1, .x = 2};
+//     printf("%d %d %d\n", p1.x, p1.y, p1.z);
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 
-struct point
+struct Ournode
 {
-    int x, y, z;
+    char x, y, z;
 };
 
 int main()
 {
-    struct point p1 = {.y = 0, .z = 1, .x = 2};
-    printf("%d %d %d", p1.x, p1.y, p1.z);
+    struct Ournode p = {'1', '0', 'a' + 2};
+    struct Ournode *q = &p;
+    printf("%c, %c\n", *((char*)q + 1), *((char*)q + 2));
     return 0;
 }
