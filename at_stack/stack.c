@@ -886,28 +886,67 @@
 
 
 
+// #include <stdio.h>
+// #pragma pack(1)
+
+// struct store 
+// {
+//     double price;
+//     char *title;
+//     char *author;
+//     int num_pages;
+//     int color;
+//     int size;
+//     char *design;
+// };
+
+// int main()
+// {
+//     struct store book;
+//     book.title = "The Alchemist";
+//     book.author = "Paulo Coelho";
+//     book.num_pages = 197;
+//     book.price = 23; // In dollars
+//     printf("%ld bytes\n", sizeof(book));
+//     return 0;
+// }
+
+
+
+
+
+
 #include <stdio.h>
 #pragma pack(1)
-
 struct store 
 {
     double price;
-    char *title;
-    char *author;
-    int num_pages;
-    int color;
-    int size;
-    char *design;
+    union
+    {
+        struct 
+        {
+            char *title;
+            char *author;
+            int num_page;
+        } book;
+
+        struct
+        {
+            int color;
+            int size;
+            char *design;
+        } shirt;
+    } item;
 };
 
 int main()
 {
-    struct store book;
-    book.title = "The Alchemist";
-    book.author = "Paulo Coelho";
-    book.num_pages = 197;
-    book.price = 23; // In dollars
-    printf("%ld bytes\n", sizeof(book));
+    struct store s;
+    s.item.book.title = "The Alchemist";
+    s.item.book.author = "Paulo Coelho";
+    s.item.book.num_pages = 197;
+    printf("%s\n", s.item.book.title);
+    printf("%ld bytes\n", sizeof(s));
     return 0;
 }
 
