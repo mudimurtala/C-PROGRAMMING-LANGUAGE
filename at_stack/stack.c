@@ -887,7 +887,7 @@
 
 
 #include <stdio.h>
-
+#pragma pack(1)
 
 struct store 
 {
@@ -907,7 +907,7 @@ int main()
     book.author = "Paulo Coelho";
     book.num_pages = 197;
     book.price = 23; // In dollars
-    printf("%d %f/n", book.num_pages, book.price);
+    printf("%ld bytes\n", sizeof(book));
     return 0;
 }
 
