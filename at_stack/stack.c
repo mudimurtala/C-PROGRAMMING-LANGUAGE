@@ -843,24 +843,43 @@
 
 
 
+// #include <stdio.h>
+
+// union abc
+// {
+//     int a;
+//     char b;
+// };
+
+// int main()
+// {
+//     union abc var;
+//     var.a = 90;
+//     union abc *p = &var;
+//     printf("%d %c\n", p->a, p->b);
+//     return 0;
+// }
+
+
+
+
 #include <stdio.h>
 
-union abc
+struct
 {
-    int a;
-    char b;
-};
+    short s[5];
+    union
+    {
+        float y;
+        long z;
+    }u;
+} t;
 
 int main()
 {
-    union abc var;
-    var.a = 90;
-    union abc *p = &var;
-    printf("%d %c\n", p->a, p->b);
+    printf("%ld\n", sizeof(t));
     return 0;
 }
-
-
 
 
 
