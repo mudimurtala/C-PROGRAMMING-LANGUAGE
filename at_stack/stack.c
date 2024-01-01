@@ -825,18 +825,43 @@
 
 
 
+// #include <stdio.h>
+
+// union abc
+// {
+//     int a;
+//     char b;
+// } var;
+
+// int main()
+// {
+//     var.a = 68;
+//     printf("a = %d\n", var.a);
+//     printf("b = %c\n", var.b);
+//     return 0;
+// }
+
+
+
 #include <stdio.h>
 
 union abc
 {
     int a;
     char b;
-} var;
+};
 
 int main()
 {
-    var.a = 68;
-    printf("a = %d\n", var.a);
-    printf("b = %c\n", var.b);
+    union abc var;
+    var.a = 90;
+    union abc *p = &var;
+    printf("%d %c\n", p->a, p->b);
     return 0;
 }
+
+
+
+
+
+
