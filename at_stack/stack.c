@@ -916,41 +916,60 @@
 
 
 
-#include <stdio.h>
-#pragma pack(1)
-struct store 
-{
-    double price;
-    union
-    {
-        struct 
-        {
-            char *title;
-            char *author;
-            int num_page;
-        } book;
+// #include <stdio.h>
+// #pragma pack(1)
+// struct store 
+// {
+//     double price;
+//     union
+//     {
+//         struct 
+//         {
+//             char *title;
+//             char *author;
+//             int num_pages;
+//         } book;
 
-        struct
-        {
-            int color;
-            int size;
-            char *design;
-        } shirt;
-    } item;
-};
+//         struct
+//         {
+//             int color;
+//             int size;
+//             char *design;
+//         } shirt;
+//     } item;
+// };
+
+// int main()
+// {
+//     struct store s;
+//     s.item.book.title = "The Alchemist";
+//     s.item.book.author = "Paulo Coelho";
+//     s.item.book.num_pages = 197;
+//     printf("%s\n", s.item.book.title);
+//     printf("%ld bytes\n", sizeof(s));
+//     return 0;
+// }
+
+
+
+
+
+#include <stdio.h>
+
+typedef union
+{
+    int a;
+    char b;
+    float c;
+} data;
 
 int main()
 {
-    struct store s;
-    s.item.book.title = "The Alchemist";
-    s.item.book.author = "Paulo Coelho";
-    s.item.book.num_pages = 197;
-    printf("%s\n", s.item.book.title);
-    printf("%ld bytes\n", sizeof(s));
+    data arr[10];
+    arr[0].a = 10;
+    arr[1].b = 'a';
+    arr[2].c = 10.178;
+    // and so on
+    printf("%d %c %f\n", arr[0].a, arr[1].b, arr[2].c);
     return 0;
 }
-
-
-
-
-
