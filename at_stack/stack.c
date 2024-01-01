@@ -799,17 +799,44 @@
 
 
 
+
+
+// #include <stdio.h>
+
+// struct Ournode
+// {
+//     char x, y, z;
+// };
+
+// int main()
+// {
+//     struct Ournode p = {'1', '0', 'a' + 2};
+//     struct Ournode *q = &p;
+//     printf("%c, %c\n", *((char*)q + 1), *((char*)q + 2));
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 
-struct Ournode
+union abc
 {
-    char x, y, z;
-};
+    int a;
+    char b;
+} var;
 
 int main()
 {
-    struct Ournode p = {'1', '0', 'a' + 2};
-    struct Ournode *q = &p;
-    printf("%c, %c\n", *((char*)q + 1), *((char*)q + 2));
+    var.a = 68;
+    printf("a = %d\n", var.a);
+    printf("b = %c\n", var.b);
     return 0;
 }
