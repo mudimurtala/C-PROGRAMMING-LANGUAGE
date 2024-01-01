@@ -894,7 +894,7 @@ struct store
     double price;
     char *title;
     char *author;
-    int num_page;
+    int num_pages;
     int color;
     int size;
     char *design;
@@ -903,8 +903,11 @@ struct store
 int main()
 {
     struct store book;
-    book = {345.8, "The Rescue", "Mudi Murtala", 56, 7, 36, "Modern"};
-    printf(book);
+    book.title = "The Alchemist";
+    book.author = "Paulo Coelho";
+    book.num_pages = 197;
+    book.price = 23; // In dollars
+    printf("%d %f/n", book.num_pages, book.price);
     return 0;
 }
 
