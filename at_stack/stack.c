@@ -863,23 +863,51 @@
 
 
 
+// #include <stdio.h>
+
+// struct
+// {
+//     short s[5];
+//     union
+//     {
+//         float y;
+//         long z;
+//     }u;
+// } t;
+
+// int main()
+// {
+//     printf("%ld\n", sizeof(t));
+//     return 0;
+// }
+
+
+
+
+
+
 #include <stdio.h>
 
-struct
+
+struct store 
 {
-    short s[5];
-    union
-    {
-        float y;
-        long z;
-    }u;
-} t;
+    double price;
+    char *title;
+    char *author;
+    int num_page;
+    int color;
+    int size;
+    char *design;
+};
 
 int main()
 {
-    printf("%ld\n", sizeof(t));
+    struct store book;
+    book = {345.8, "The Rescue", "Mudi Murtala", 56, 7, 36, "Modern"};
+    printf(book);
     return 0;
 }
+
 
 
 
