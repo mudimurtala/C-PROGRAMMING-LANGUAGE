@@ -26,7 +26,7 @@ int main() {
     // Define an array of integers
     int numbers[] = {10, 20, 30, 40, 50};
     // Calculate the size of the array
-    size_t size = sizeof(numbers) / sizeof(numbers[0]);
+    size_t size = 5; //sizeof(numbers) / sizeof(numbers[0]);
     printf("%ld\n", size);
     // Call the print_array function with the numbers array
     print_array(numbers, size);
